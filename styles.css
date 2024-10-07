@@ -5,7 +5,6 @@ body{
 }
 
 .header{
-    outline: 1px solid red;
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -20,7 +19,6 @@ body{
 .characters{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    outline: 1px solid red;
     justify-items: center;
     margin: 0;
 }
