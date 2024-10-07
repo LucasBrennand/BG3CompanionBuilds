@@ -1,0 +1,105 @@
+body{
+    background-color: rgb(30, 19, 57);
+    color: white;
+    text-align: center;
+}
+
+.header{
+    outline: 1px solid red;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+.header audio{
+    width: 200px;
+    padding: 20px;
+}
+
+.characters{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    outline: 1px solid red;
+    justify-items: center;
+    margin: 0;
+}
+
+.characters h1{
+    width: 40vw;
+    height: 200px;
+    padding: 20px;
+    margin: 10px;
+    outline: 1px solid blue;
+    border-radius: 10px;
+    &:hover{
+        transform: scale(110%);
+        transition: 100ms;
+    }
+}
+
+.characters-wyll{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Wyll.png);
+    background-size: 400px;
+    background-repeat: no-repeat;
+    
+}
+.characters-karlach{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/karlach.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+}
+.characters-gale{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Gale.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+.characters-asterion{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Asterion.jpeg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+}
+.characters-shadowheart{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Shadowheart.jpeg);
+    background-size: 230px;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+}
+.characters-laezel{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Laezel.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+.characters-minthara{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Minthara.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+}
+.characters-halsin{
+    background-color: rgb(15, 15, 49);
+    background-image:url(Images/Halsin.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+
+/* From Uiverse.io by barisdogansutcu */ 
+.volume {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: rgb(205, 191, 247);
+    overflow: hidden;
+    align-self: flex-end;
+  }
+ 
+ 

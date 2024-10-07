@@ -1,0 +1,372 @@
+@property --scroll-y-position {
+    syntax: "<percentage>";
+    initial-value: -10%;
+    inherits: false;
+  }
+  @property --reflection-y-position {
+    syntax: "<percentage>";
+    initial-value: -50%;
+    inherits: false;
+  }
+  @property --scrollbar-color {
+    syntax: "<color>";
+    inherits: false;
+    initial-value: transparent;
+  }
+  @property --opacity-1 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0.1;
+  }
+  @property --opacity-2 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0.1;
+  }
+  @property --opacity-3 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0.1;
+  }
+  @property --opacity-4 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0.1;
+  }
+  
+  @property --text-offset-1 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 10;
+  }
+  @property --text-offset-2 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 10;
+  }
+  @property --text-offset-3 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 10;
+  }
+  @property --text-offset-4 {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 10;
+  }
+
+html::-webkit-scrollbar {
+    display: none;
+
+  }
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+  color: var(--rgb(14, 167, 24), green);
+}
+
+:target {
+  scroll-margin-top: 50px;
+  scroll-behavior: smooth;
+}
+
+body{
+    background-color: rgb(30, 19, 57);
+    color:  white;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding-bottom: 40vh;
+  }
+
+  .title{
+    color: rgb(16, 196, 16);
+    letter-spacing: .1em;
+    text-shadow: 
+      0 -1px 0 #082904, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 14px 0 #141414, 
+      0 15px 0 #121212, 
+      0 22px 30px rgba(10, 135, 28, 0.9);
+  }
+
+.scrollbar {
+    width: 4px;
+    height: 100%;
+    background-color: var(--scrollbar-color);
+    background-image: radial-gradient(
+      circle at 0% var(--scroll-y-position),
+      rgb(112, 153, 255) 0%,
+      rgba(56, 106, 249, 0.79135) 10px,
+      rgba(10, 76, 242, 0.53) 20px,
+      rgba(255, 255, 255, 0) 40px,
+      rgba(49, 49, 49, 0) 100%
+    );
+    animation: on-scrolling both linear;
+    animation-timeline: scroll();
+    animation-range: 10vh;
+  }
+
+.cover{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    &.cover img{
+        height: 500px;
+        width: 400px;
+        justify-content: center;
+        align-self: center;
+        outline: 3px solid black;
+        border-radius: 50%;
+    }
+}
+
+.levels {
+    background-image: linear-gradient(
+      270deg,
+      rgba(255, 255, 255, 0.4) 0%,
+      rgba(255, 255, 255, 0.9) 90%,
+      rgb(191, 209, 255) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 20px;
+    line-height: 1.5em;
+    --opacity-1: 0.1;
+    --opacity-2: 0.1;
+    --opacity-3: 0.1;
+    --opacity-4: 0.1;
+    --text-offset-1: 10;
+    --text-offset-2: 10;
+    --text-offset-3: 10;
+    --text-offset-4: 10;
+    animation: on-scrolling both linear;
+    animation-timeline: scroll();
+    animation-range: 10vh;
+  }
+  
+  @keyframes on-scrolling {
+    0% {
+      --scroll-y-position: -10%;
+      --reflection-y-position: -22%;
+    }
+    1% {
+      --scrollbar-color: rgba(255, 255, 255, 0.1);
+    }
+    25% {
+      --opacity-1: 1;
+      --opacity-2: 0.1;
+      --opacity-3: 0.1;
+      --opacity-4: 0.1;
+  
+      --text-offset-1: 0;
+      --text-offset-2: 10;
+      --text-offset-3: 10;
+      --text-offset-4: 10;
+    }
+    50% {
+      --scroll-y-position: 50%;
+      --reflection-y-position: 50%;
+      --opacity-1: 0.1;
+      --opacity-2: 1;
+      --opacity-3: 0.1;
+      --opacity-4: 0.1;
+  
+      --text-offset-1: 10;
+      --text-offset-2: 0;
+      --text-offset-3: 10;
+      --text-offset-4: 10;
+    }
+    60% {
+      --opacity-1: 0.1;
+      --opacity-2: 0.1;
+      --opacity-3: 1;
+      --opacity-4: 0.1;
+  
+      --text-offset-1: 10;
+      --text-offset-2: 10;
+      --text-offset-3: 0;
+      --text-offset-4: 10;
+    }
+    90% {
+      --opacity-1: 0.1;
+      --opacity-2: 0.1;
+      --opacity-3: 0.1;
+      --opacity-4: 1;
+  
+      --text-offset-1: 10;
+      --text-offset-2: 10;
+      --text-offset-3: 10;
+      --text-offset-4: 0;
+    }
+    100% {
+      --text-offset-1: 10;
+      --text-offset-2: 10;
+      --text-offset-3: 10;
+      --text-offset-4: 10;
+      --opacity-1: 0.1;
+      --opacity-2: 0.1;
+      --opacity-3: 0.1;
+      --opacity-4: 0.1;
+      --scroll-y-position: 200%;
+      --reflection-y-position: 115%;
+      --scrollbar-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+
+.container {
+    width: 800px;
+    height: 100%;
+    background: linear-gradient(
+      132deg,
+      rgba(255, 255, 255, 0.09) 0%,
+      rgba(238, 238, 238, 0.03) 20%,
+      rgba(202, 202, 202, 0.04) 70%,
+      rgba(171, 171, 171, 0.02) 100%
+    );
+    border: solid rgba(255, 255, 255, 0.06) 1px;
+    margin-left: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .container::before,
+  .container::after {
+    content: "";
+    z-index: -9999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(3, 23, 2, 0) 0%,
+      rgba(10, 164, 41, 0.752) 38.288288288288285%,
+      rgb(10, 187, 98) 50.9132179054054%,
+      rgba(4, 116, 19, 0.752) 63.06306306306306%,
+      rgba(4, 122, 27, 0) 200%
+    );
+    background-repeat: no-repeat;
+    background-position-y: var(--reflection-y-position);
+    animation: on-scrolling both linear;
+    animation-timeline: scroll();
+    animation-range: 200vh;
+  }
+  .container::before {
+    background-size: 1px 150px;
+    filter: blur(1px);
+  }
+  .container::after {
+    background-size: 10px 200px;
+    filter: blur(10px);
+  }
+
+  .levelBox{
+    outline: 3px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 1px 2px 3px black;
+    margin: 20px;
+    width: 500px;
+  }
+
+  .containerBox{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    align-items: flex-start;
+  }
+
+  .contents {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* adjust the width as needed */
+    height: 400px;
+    padding: 50px;
+    margin: 20px;
+    background: linear-gradient(132deg, rgba(255, 255, 255, 0.09) 0%, rgba(238, 238, 238, 0.03) 20%, rgba(202, 202, 202, 0.04) 70%, rgba(171, 171, 171, 0.02) 100%);
+}
+
+.contents ul, .gearContainer ul{
+  margin: 0;
+		gap: 0.6rem;
+		padding: 0;
+		display: flex;
+		list-style: none;
+		place-items: center;
+		flex-direction: column;
+		counter-reset: my-counter;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.contents li, .gearContainer li{
+  color: white;
+  &:hover{
+    color: rgb(14, 167, 24);
+  }
+}
+
+
+.gearContainer {
+  position: fixed;
+  top: 500px; /* adjust the top position to match the height of the contents header */
+  left: 0;
+  width: 200px; /* adjust the width to match the width of .contents */
+  padding: 50px;
+  margin: 30px 20px;
+  background: linear-gradient(132deg, rgba(255, 255, 255, 0.09) 0%, rgba(238, 238, 238, 0.03) 20%, rgba(202, 202, 202, 0.04) 70%, rgba(171, 171, 171, 0.02) 100%);
+}
+
+.gear{
+  background-color: inherit;
+}
+
+@media (max-width: 1150px) {
+  main, .container, .containerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    width: 100%;
+    margin-left: 0;
+  }
+  .contents, .gearContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+}
