@@ -12,4 +12,16 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open(wikiUrl, '_blank');
         });
     });
+
+    const volumeButton = document.getElementById('volume');
+    const audio = document.getElementById('audio');
+
+    volumeButton.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
 });

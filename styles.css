@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'Aldine 721bt';
+    src: url('aldine-721-bt.ttf') format('truetype');
+}
+
 body{
     background-color: rgb(30, 19, 57);
     color: white;
     text-align: center;
+    font-family: 'Aldine 721bt', serif;
+    text-decoration: none;
 }
 
 .header{
@@ -21,6 +28,12 @@ body{
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     margin: 0;
+    text-decoration: none;
+}
+
+.characters a{
+    text-decoration: none;
+    color: rgb(188, 168, 54);
 }
 
 .characters h1{

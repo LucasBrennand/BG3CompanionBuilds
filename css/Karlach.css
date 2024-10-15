@@ -65,7 +65,7 @@ html{
 }
 
 :root{
-  color: var(--rgb(14, 167, 24), green);
+  color: var(--rgb(14, 167, 24), red);
 }
 
 :target {
@@ -74,7 +74,7 @@ html{
 }
 
 body{
-    background-color: rgb(30, 19, 57);
+    background-color: rgb(75, 11, 3);
     color:  white;
     margin: 0;
     font-family: sans-serif;
@@ -91,7 +91,7 @@ main {
   }
 
 .title{
-    color: rgb(16, 196, 16);
+    color: rgb(209, 32, 32);
     letter-spacing: .1em;
     text-shadow: 
       0 -1px 0 #082904, 
@@ -110,7 +110,7 @@ main {
       0 13px 0 #161616, 
       0 14px 0 #141414, 
       0 15px 0 #121212, 
-      0 22px 30px rgba(10, 135, 28, 0.9);
+      0 22px 30px rgba(224, 10, 10, 0.9);
   }
 
 .scrollbar {
@@ -119,8 +119,8 @@ main {
     background-color: var(--scrollbar-color);
     background-image: radial-gradient(
       circle at 0% var(--scroll-y-position),
-      rgb(112, 153, 255) 0%,
-      rgba(56, 106, 249, 0.79135) 10px,
+      rgb(239, 18, 18) 0%,
+      rgba(249, 75, 56, 0.791) 10px,
       rgba(10, 76, 242, 0.53) 20px,
       rgba(255, 255, 255, 0) 40px,
       rgba(49, 49, 49, 0) 100%
@@ -141,6 +141,7 @@ main {
         align-self: center;
         outline: 3px solid black;
         border-radius: 50%;
+        object-fit: cover;
     }
 }
 
@@ -281,16 +282,16 @@ main {
     background: linear-gradient(
       180deg,
       rgba(3, 23, 2, 0) 0%,
-      rgba(10, 164, 41, 0.752) 38.288288288288285%,
-      rgb(10, 187, 98) 50.9132179054054%,
-      rgba(4, 116, 19, 0.752) 63.06306306306306%,
+      rgba(254, 5, 5, 0.752) 38.288288288288285%,
+      rgb(187, 10, 10) 50.9132179054054%,
+      rgba(70, 4, 4, 0.752) 63.06306306306306%,
       rgba(4, 122, 27, 0) 200%
     );
     background-repeat: no-repeat;
     background-position-y: var(--reflection-y-position);
     animation: on-scrolling both linear;
     animation-timeline: scroll();
-    animation-range: 200vh;
+    animation-range: 50vh;
   }
   .container::before {
     background-size: 1px 150px;
@@ -315,6 +316,7 @@ main {
     flex-direction: row;
     gap: 200px;
     align-items: flex-start;
+    position: relative;
   }
 
   .contents {
@@ -344,7 +346,7 @@ main {
 .contents li, .gearContainer li{
   color: white;
   &:hover{
-    color: rgb(14, 167, 24);
+    color: rgb(236, 15, 15);
   }
 }
 
